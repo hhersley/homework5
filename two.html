@@ -37,32 +37,17 @@
    
    <body>
    
-   
-  
-<h2>Geolocation</h2>
-  <h2> JS 2 </h2>
+   <h2>JavaScript Callback</h2>
 
-  
-<button onclick="getLocation()">Try It</button>
+<p>Wait 3 seconds for this page to change.</p>
 
-<p id="demo"></p>
+<h1 id="demo"></h1>
 
-  
-  
 <script>
-const x = document.getElementById("demo");
+setTimeout(myFunction, 3000);
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Happy (late) Halloween!!!";
 }
 </script>
   
